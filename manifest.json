@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "FuOverflow MLN122 Pro - Quản Lý Đề, Ảnh HD, ĐA Đỏ & Đã Học",
+  "version": "3.7",
+  "author": "thanh duyvp",
+  "description": "Quét tên đề & ảnh bên trong, đánh dấu câu/đề đã học, tự động căn giữa màn hình khi chuyển câu, tối ưu chiều cao hiển thị. Dev by thanh duyvp",
+  "permissions": ["storage"],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://fuoverflow.com/threads/*",
+        "*://fuoverflow.com/forums/*"
+      ],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
